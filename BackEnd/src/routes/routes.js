@@ -28,7 +28,7 @@ router.get("/getUser", async (req, res) => {
   let result = await BD.Open(sql, [], false);
   Users = [];
 
-  result.rows.map((user) => {
+  result.rows.map((usuer) => {
     let userSchema = {
         Nombre: usuer[1],
         Apellido: usuer[2],
@@ -257,7 +257,7 @@ router.get("/comentarios", async (req, res) => {});
 
 router.post("/comentarios/subirComentario", async (req, res) => {});
 
-router.get("/mostrarProd", async (req, res) => {
+router.get("/getProd", async (req, res) => {
   //Esta sera consulta para el area de detalle
 });
 
@@ -282,11 +282,9 @@ router.get("/confirmarCompra", async (req, res) => {});
 
 //Area de busqueda y respuesta
 
-router.get("/buscarPorCategoria", async (req, res) => {});
+router.get("/Categoria", async (req, res) => {});
 
 router.get("/buscarPalabrasClave", async (req, res) => {});
-
-router.get("/buscarProd", async (req, res) => {});
 
 //administracion
 
